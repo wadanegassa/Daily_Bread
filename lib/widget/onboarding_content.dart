@@ -18,42 +18,42 @@ class OnboardingContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size; // get full screen size
+    final size = MediaQuery.of(context).size;
 
     return Scaffold(
       body: Container(
         width: size.width,
-        height: size.height, // 👈 ensures it fills the full height
-        decoration: const BoxDecoration(
+        height: size.height,
+        decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [Color(0xFFF3E5F5), Color(0xFFEDE7F6)],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
         ),
-        child: SafeArea( // 👈 keeps content clear of status bar
+        child: SafeArea( 
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+            padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween, // 👈 spaces evenly
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                   children: [
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(20),
                       child: Image.asset(
                         imagePath,
-                        height: size.height * 0.3, // responsive image height
+                        height: size.height * 0.3,
                         width: double.infinity,
                         fit: BoxFit.cover,
                       ),
                     ),
-                    const SizedBox(height: 40),
+                    SizedBox(height: 40),
                     Text(
                       title,
                       textAlign: TextAlign.center,
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 26,
                         fontWeight: FontWeight.bold,
                         color: Color(0xFF3D2C8D),
