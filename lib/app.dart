@@ -1,7 +1,7 @@
+import 'package:daily_bread/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'screens/splash_screen.dart';
 import 'screens/onboarding_screen.dart';
-import 'screens/home_screen.dart';
 
 class DailyBreadApp extends StatelessWidget {
   const DailyBreadApp({super.key});
